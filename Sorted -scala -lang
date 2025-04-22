@@ -1,0 +1,13 @@
+object Sorted extends App {
+
+//this  is no require  main method 
+ 
+val numbers = List(5, 2, 9, 1, 7)
+// val is immutable 
+  
+val sortedNumbers = numbers.sorted 
+//  numbers is immutable object
+ 
+println(s"Sorted list: $sortedNumbers") 
+// print new line
+}
