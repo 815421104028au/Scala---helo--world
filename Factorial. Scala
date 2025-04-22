@@ -1,0 +1,18 @@
+object factorial {
+  def factorial(n: Int): Int = {
+  var i = 1 //mutable
+  var result = 1 //mutable
+  while (i <= n) {  // based on condition 
+    result *= i //logic Calculations and multiple assignment operation  which is mutable
+    i += 1 //Inc for fact progress
+  }
+  result 
+  }//return the int as o/p
+def main(args: Array[String]): Unit = {
+ val a = 5
+ val fact = factorial(a)
+
+println(fact) //functionbcall
+// Output: 120
+}
+}
