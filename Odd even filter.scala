@@ -1,0 +1,12 @@
+object oddevenfilter {
+  def main(args: Array[String]): Unit = {
+    val numbers = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+    val evenNumbers = numbers.filter(_ % 2 == 0) // to get  even
+    val oddNumbers = numbers.filter(_ % 2 != 0)  // to get  odd
+
+    println(s"Original List: $numbers")
+    println(s"Even Numbers: $evenNumbers")
+    println(s"Odd Numbers: $oddNumbers")
+  }
+}
