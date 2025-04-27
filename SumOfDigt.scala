@@ -6,7 +6,7 @@ var sum = 0 // require for return type
 while(s!=0){
 
 var f= s % 10 //last digit comes to calculate
-sum =digit +f //Calculate
+sum =digit + f //Calculate
 s = s / 10     //update the s: int
 }
 return sum
