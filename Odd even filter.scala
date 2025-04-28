@@ -1,12 +1,22 @@
-object oddevenfilter {
+object EvenOddFinder {
   def main(args: Array[String]): Unit = {
-    val numbers = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    val numbers = List(5, 7, 3, 6)
+    for (x <- numbers){
+    if(x % 2 == 0){
+    print (x +" a even,\t")
+    }
+    else 
+    print(x +" a odd,\t")
+    }
 
     val evenNumbers = numbers.filter(_ % 2 == 0) // to get  even
-    val oddNumbers = numbers.filter(_ % 2 != 0)  // to get  odd
+    val oddNumbers = numbers.filter(_ % 2 != 0) 
+    // to get  odd
+   // val num = numbers.mkstring(", ")
 
-    println(s"Original List: $numbers")
-    println(s"Even Numbers: $evenNumbers")
-    println(s"Odd Numbers: $oddNumbers")
+   println()
+    println("Original List:"+numbers.mkString(", "))
+    println("Even Numbers:"+evenNumbers.mkString (", "))
+    println("Odd Numbers: "+oddNumbers.mkString(","))
   }
 }
