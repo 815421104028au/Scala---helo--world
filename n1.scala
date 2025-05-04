@@ -17,6 +17,8 @@ println(n.num)
 //n.num -= 9
 n.num --=Seq(9, 10) //remove all with specific 
 println(n.num)
+ val a = n.num.filter(x => x >= 1 && x <= 5)
+  println(a)
 n.num.remove(2) //remove some particular
 println(n.num)
 n.num.insert (2,3) //insert specific position to add element
