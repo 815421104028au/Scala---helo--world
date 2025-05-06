@@ -1,0 +1,68 @@
+// Step 1: Define the Student class
+class student (val name: String, val mark: Int)
+{
+def show(): Unit = {
+println(s"$name ,$mark ")
+}
+}
+
+
+// Step 2: Main class
+object StudentApp {
+  def main(args: Array[String]): Unit = {
+    
+    // Step 3: Create list of students
+    val Students = List(
+      new student("John", 80),
+      new student("Jacob", 99),
+      new student("Abraham", 75),
+      new student("Kevin", 66),
+      new student("Hayes", 98),
+      new student("Abraham", 93),
+      new student("Daniel", 90),
+      new student("Kim", 45),
+      new student("Lisa", 54),
+      new student("Jacob", 88)
+    )
+
+    //  Print all student names
+    println("All Student Names:")
+    for (student <- Students)
+     student.show()
+    
+
+    //  Sort in descending order and print top 5 names
+    println("\nTop 5 Students Descending ")
+    Students.sortBy(s => s.mark)
+     .reverse
+     .take(5)
+    for (s <- Students)
+    {
+    s.show()
+    }
+    
+
+    //  Sort in ascending order and print bottom 5 names
+    println("\nBottom 5 Students (Ascending):")
+    Students.sortBy(s => s.mark)
+    .take(5)
+    .foreach(s => println(s.name))
+
+    // Find and print average mark
+    val average = Students
+    .map(student => student.mark)
+     .sum.toDouble / Students.length
+    println(f"\Mark: $average%.2f")
+
+    //  Add marks of students named "Abraham"
+    val abrahamTotal = Students.filter(s => s.name == "Abraham")
+    .map(s => s.mark)
+    .sum
+    println(s"\nTotal Marks of Abraham: $abrahamTotal")
+
+    //  Print student names with mark > 90
+    println("\nStudents with mark > 90:")
+    Students.filter(s => s.mark > 90)
+    .foreach(s => println(s.name))
+  }
+}
