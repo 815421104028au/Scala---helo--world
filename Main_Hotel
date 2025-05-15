@@ -1,0 +1,83 @@
+abstract class Hotel(var room: Int, var days: Int, var food: Int)
+
+class Standard(room: Int, days: Int, food: Int) extends Hotel(room, days, food) {
+  val tax = (12.5 / 100) * room
+  var tot = tax + room * days
+  tot = tot + days * food
+  println("Standard Room:")
+  println("Tax: " + tax)
+  println("Total: " + tot)
+}
+
+class Deluxe(room: Int, days: Int, food: Int) extends Hotel(room, days, food) {
+  val tax = (12.5 / 100) * room
+  var tot = tax + room * days
+  tot = tot + days * food
+  println("Deluxe Room:")
+  println("Tax: " + tax)
+  println("Total: " + tot)
+}
+
+class Suite(room: Int, days: Int, food: Int) extends Hotel(room, days, food) {
+  val tax = (12.5 / 100) * room
+  var tot = tax + room * days
+  tot = tot + days * food
+  println("Suite Room:")
+  println("Tax: " + tax)
+  println("Total: " + tot)
+}
+
+object Main_Hotel {
+  def main(args: Array[String]): Unit = {
+    val days = 15
+    val food = 800
+    val room_1 = 2500
+    val room_2 = 3500
+    val room_3 = 4500
+
+    val r1 = new Standard(room_1, days, food)
+    val r2 = new Deluxe(room_2, days, food)
+    val r3 = new Suite(room_3, days, food)
+  }
+}abstract class Hotel(var room: Int, var days: Int, var food: Int)
+
+class Standard(room: Int, days: Int, food: Int) extends Hotel(room, days, food) {
+  val tax = (12.5 / 100) * room
+  var tot = tax + room * days
+  tot = tot + days * food
+  println("Standard Room:")
+  println("Tax: " + tax)
+  println("Total: " + tot)
+}
+
+class Deluxe(room: Int, days: Int, food: Int) extends Hotel(room, days, food) {
+  val tax = (12.5 / 100) * room
+  var tot = tax + room * days
+  tot = tot + days * food
+  println("Deluxe Room:")
+  println("Tax: " + tax)
+  println("Total: " + tot)
+}
+
+class Suite(room: Int, days: Int, food: Int) extends Hotel(room, days, food) {
+  val tax = (12.5 / 100) * room
+  var tot = tax + room * days
+  tot = tot + days * food
+  println("Suite Room:")
+  println("Tax: " + tax)
+  println("Total: " + tot)
+}
+
+object GFG {
+  def main(args: Array[String]): Unit = {
+    val days = 15
+    val food = 800
+    val room_1 = 2500
+    val room_2 = 3500
+    val room_3 = 4500
+
+    val r1 = new Standard(room_1, days, food)
+    val r2 = new Deluxe(room_2, days, food)
+    val r3 = new Suite(room_3, days, food)
+  }
+}
