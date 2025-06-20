@@ -33,8 +33,8 @@ object BookMyShow {
      println("enter 1 for book your seats")
      val temp =readInt()
      var yourSeat: Set[Int] = if(temp==1){
-         println("\n enter seats and must press '0' to stop")
-          val seats = Buildset()
+         println("\n enter seats\n like 2=>enter,3=>enter,0=>enter \n0 is neccessary to stop recursion")  //like 2->enter,3->enter,0->enter
+          val seats = Buildset()                             //0 is neccessary to stop recursion
           println(s"Entered seats${seats.mkString(", ")}")
           objScreen.bookingSeat(defaultSeats: Set[Int],seats: Set[Int],userName: String,objScreen.movie(item: Int))
           seats
@@ -47,7 +47,7 @@ object BookMyShow {
      println("enter 2 for cancel")
      var tt =readInt()
      yourSeat = if(tt==2){
-         println("\n enter seats and press 0 to stop")
+         println("\n enter seats\n like 2=>enter,3=>enter,0=>enter \n0 is neccessary to stop recursion")
          val seats = Buildset()
          println(s"seats you try to cancel ${seats.mkString(", ")}")
           objScreen.cancelSeat( defaultSeats: Set[Int],seats: Set[Int],yourSeat: Set[Int])
